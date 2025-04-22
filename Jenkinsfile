@@ -13,7 +13,7 @@ pipeline {
 
     stage('Clone Repository') {
       steps {
-        git 'https://github.com/Misbah01118/DevObs.git'
+        git branch: 'main', url: 'https://github.com/Misbah01118/DevObs.git'
       }
     }
 
