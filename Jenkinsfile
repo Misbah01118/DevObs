@@ -4,7 +4,7 @@ pipeline {
   environment {
     SSH_KEY = credentials('ec2-ssh-key')
     EC2_USER = 'ubuntu'
-    EC2_IP = '<YOUR_EC2_PUBLIC_IP>'
+    EC2_IP = '65.2.189.113'
     ZIP_FILE = 'nextjs-app.tar.gz'
     MAVEN_OPTS = "-Dmaven.repo.local=.m2/repository"
   }
