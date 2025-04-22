@@ -2,7 +2,6 @@ pipeline {
   agent any
 
   environment {
-    ARTIFACTORY_CREDS = credentials('artifactory-creds')  // optional, not used now
     SSH_KEY = credentials('ec2-ssh-key')
     EC2_USER = 'ubuntu'
     EC2_IP = '<YOUR_EC2_PUBLIC_IP>'
