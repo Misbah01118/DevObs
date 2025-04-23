@@ -37,10 +37,10 @@
   </build>
 
   <distributionManagement>
-    <repository>
-      <id>nexus</id>
-      <url>http://3.108.42.98:8081/repository/maven-releases/</url>
-    </repository>
-  </distributionManagement>
+  <repository>
+    <id>nexus</id>
+    <url>http://3.108.42.98:8081/repository/maven-releases/</url>
+  </repository>
+</distributionManagement>
 
 </project>
