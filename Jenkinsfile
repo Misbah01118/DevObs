@@ -39,7 +39,7 @@ pipeline {
       steps {
         sh '''
           scp -i $SSH_KEY $ZIP_FILE $EC2_USER@$EC2_IP:/home/ubuntu/
-          ssh -i $SSH_KEY $EC2_USER@$EC2_IP "pkill node || true && rm -rf next-app && mkdir next-app && tar -xzf nextjs-app.tar.gz -C next-app && cd next-app && nohup npm run start > next-app.log 2>&1 &"
+          ssh -i $SSH_KEY $EC2_USER@$EC2_IP "pkill node || true && rm -rf next-app && mkdir next-app && tar -xzf nextjs-app.tar.gz -C next-app && cd next-app && nohup npm run start -- -H 0.0.0.0 > next-app.log 2>&1 &"
         '''
       }
     }
